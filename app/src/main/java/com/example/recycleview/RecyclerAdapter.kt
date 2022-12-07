@@ -29,8 +29,14 @@ class RecyclerAdapter(
         return list.size
     }
 
+    fun updateList(newList: List<ContactEntity>) {
+        list = newList
+        this.notifyDataSetChanged()
+    }
+
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val textView = itemView.findViewById<TextView>(R.id.textView)
+
         // находим кнопку
         val button = itemView.findViewById<TextView>(R.id.button)
     }

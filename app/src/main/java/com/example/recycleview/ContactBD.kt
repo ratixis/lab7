@@ -60,16 +60,15 @@ class ContactBD : AppCompatActivity() {
         }
 
 
-
         val id = intent.getLongExtra(MainActivity.EXTRA_KEY, -1)
         val phonenumber = findViewById<TextView>(R.id.textPhoneNumber)
         val name = findViewById<TextView>(R.id.textFirstName)
         val lastName = findViewById<TextView>(R.id.textLastName)
         val birthdayDate = findViewById<TextView>(R.id.textBirthdayDate)
-       // val buttonBack = findViewById<Button>(R.id.buttonBack)
-        val buttonDelete = findViewById<Button>(R.id.buttonDelete)
+        // val buttonBack = findViewById<Button>(R.id.buttonBack)
+      //  val buttonDelete = findViewById<Button>(R.id.buttonDelete)
         val buttonEdit = findViewById<Button>(R.id.buttonEdit)
-//        val contactDao = contactDatabase
+//    val contactDao = contactDatabase
         val contactEntity = contactDatabase.getById(id)
 
 
@@ -81,14 +80,13 @@ class ContactBD : AppCompatActivity() {
 
 
         //buttonBack.setOnClickListener {
-         //   val mainActivity = Intent(this, MainActivity::class.java)
+        //   val mainActivity = Intent(this, MainActivity::class.java)
         //    startActivity(mainActivity)
-      //      finish()
-       // }
-      //  phonenumber.setOnClickListener {
-      //      checkPermission(contactEntity.phoneNumber)
-      //  }
-
+        //      finish()
+        // }
+        //  phonenumber.setOnClickListener {
+        //      checkPermission(contactEntity.phoneNumber)
+        //  }
 
 
         buttonEdit.setOnClickListener {
@@ -99,24 +97,23 @@ class ContactBD : AppCompatActivity() {
         }
 
 
-       // buttonDelete.setOnClickListener {
-         //   val conEntity = contactDatabase.getById(id)
+        // buttonDelete.setOnClickListener {
+        //   val conEntity = contactDatabase.getById(id)
         //    contactDao.delete(contactEntity)
         //    val mainActivity = Intent(this, MainActivity::class.java)
         //    startActivity(mainActivity)
-       //     finish()
+        //     finish()
         //}
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.main_menu,menu )
-
+        menuInflater.inflate(R.menu.main_menu, menu)
         return true
     }
 
-    override  fun onOptionsItemSelected(item: MenuItem): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
-        when(item.itemId){
+        when (item.itemId) {
             android.R.id.home -> {
                 val mainActivity = Intent(this, MainActivity::class.java)
                 startActivity(mainActivity)
@@ -124,17 +121,16 @@ class ContactBD : AppCompatActivity() {
             }
 
 
-
-                R.id.delet -> {
-                    val id = intent.getLongExtra(MainActivity.EXTRA_KEY, -1)
-                      Toast.makeText(this, "delete", Toast.LENGTH_SHORT).show()
-                    val conEntity = contactDatabase.getById(id)
-                        contactDatabase.delete(conEntity)
-                        val mainActivity = Intent(this, MainActivity::class.java)
-                        startActivity(mainActivity)
-                        finish()
-                }
+            R.id.delet -> {
+                val id = intent.getLongExtra(MainActivity.EXTRA_KEY, -1)
+                Toast.makeText(this, "delete", Toast.LENGTH_SHORT).show()
+                val conEntity = contactDatabase.getById(id)
+                contactDatabase.delete(conEntity)
+                val mainActivity = Intent(this, MainActivity::class.java)
+                startActivity(mainActivity)
+                finish()
+            }
         }
         return true
-   }
+    }
 }
