@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CA686B"
+    tools:context=".ContactBD">
+
+    <TextView
+        android:id="@+id/textPhoneNumber"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="107dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="22dp"
+        android:text="Номер:"
+        android:textColor="#FAFAFA"
+        app:layout_constraintBottom_toTopOf="@+id/textFirstName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textBirthdayDate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="95dp"
+        android:text="ДР:"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/buttonEdit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLastName" />
+
+    <TextView
+        android:id="@+id/textLastName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="20dp"
+        android:text="Фамилия"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/textBirthdayDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFirstName" />
+
+    <TextView
+        android:id="@+id/textFirstName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="26dp"
+        android:text="Имя:"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/textLastName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPhoneNumber" />
+
+    <Button
+        android:id="@+id/buttonEdit"
+        android:layout_width="188dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="29dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="Редактировать"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/buttonDelete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textBirthdayDate" />
+
+    <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="157dp"
+        android:backgroundTint="#FBFBFB"
+        android:text="-"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEdit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
